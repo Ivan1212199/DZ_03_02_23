@@ -1,11 +1,15 @@
-﻿Console.WriteLine("Введите начальное число M:");
-int numberM = int.Parse(Console.ReadLine());
+﻿/*
+Задача 66: Задайте значения M и N. Напишите программу, которая найдёт сумму натуральных элементов в промежутке от M до N.
+*/
+
 
 Console.WriteLine("Введите начальное число M:");
-int numberN = int.Parse(Console.ReadLine());
+int numberM = int.Parse(Console.ReadLine()!);
 
-///Метод нахождения суммы натуральных элементов в промежутке от M до N
-void GapNumberSum (int numberM, int numberN, int sum)
+Console.WriteLine("Введите начальное число N:");
+int numberN = int.Parse(Console.ReadLine()!);
+
+void GapNumSum (int numberM, int numberN, int sum)
 {
     if (numberM > numberN) 
     {
@@ -13,7 +17,7 @@ void GapNumberSum (int numberM, int numberN, int sum)
         return;
     }
     sum = sum + (numberM++);
-    GapNumberSum(numberM, numberN, sum);
+    GapNumSum(numberM, numberN, sum);
 }
 
-GapNumberSum(numberM, numberN, 0);
+GapNumSum(numberM, numberN, 0);
